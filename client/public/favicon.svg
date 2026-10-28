@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+  <!-- Modern stylized folded dynamic T -->
+  <path d="M12 16C12 13.7909 13.7909 12 16 12H48C50.2091 12 52 13.7909 52 16C52 18.2091 50.2091 20 48 20H38V48C38 52.4183 34.4183 56 30 56C25.5817 56 22 52.4183 22 48V20H16C13.7909 20 12 18.2091 12 16Z" fill="url(#g1)" />
+  <path d="M26 12L46 22L36 34L26 24V12Z" fill="url(#g2)" opacity="0.85" />
+</svg>

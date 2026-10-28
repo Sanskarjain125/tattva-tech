@@ -1,0 +1,13 @@
+{
+  "name": "tattva-tech-website",
+  "version": "1.0.0",
+  "description": "Tattva Tech Company Website - MERN Stack",
+  "scripts": {
+    "dev:server": "cd server && npm start",
+    "dev:client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["mern", "react", "vite", "tailwind", "express", "mongodb"],
+  "author": "Tattva Tech Team",
+  "license": "MIT"
+}
