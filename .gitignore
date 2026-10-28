@@ -17,6 +17,8 @@ client/dist/
 !.env.example
 !.env.*.example
 
+server/.env.example
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
