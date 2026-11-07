@@ -213,7 +213,7 @@ As speed increases, automated continuous security scanning, automated linting, a
             <div
               key={art._id || art.id}
               onClick={() => setSelectedArticle(art)}
-              className="group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between hover:-translate-y-1.5"
+              className="insights-card group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between hover:-translate-y-1.5"
             >
               <div>
                 {/* Visual Thumbnail */}
@@ -258,7 +258,7 @@ As speed increases, automated continuous security scanning, automated linting, a
 
       {/* ================= ARTICLE READER MODAL ================= */}
       {selectedArticle && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
+        <div className="tilt-exempt-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
           <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative max-h-[90vh] overflow-y-auto">
             
             <button

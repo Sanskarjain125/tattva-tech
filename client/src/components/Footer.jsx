@@ -27,7 +27,7 @@ export default function Footer({ setActivePage }) {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold tracking-tight text-white group-hover:text-blue-400 transition-colors">
-                  TATTVAA TECH
+                  TATTVA TECH
                 </span>
                 <span className="text-[9px] font-bold tracking-[0.2em] text-blue-400 uppercase">
                   IDEAS INTO IMPACT
@@ -36,7 +36,7 @@ export default function Footer({ setActivePage }) {
             </div>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Tattvaa Tech builds modern software, AI solutions and SaaS products that help ambitious businesses grow, automate and scale.
+              Tattva Tech builds modern software, AI solutions and SaaS products that help ambitious businesses grow, automate and scale.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -120,11 +120,6 @@ export default function Footer({ setActivePage }) {
               <li>
                 <button onClick={() => handleNav('about')} className="hover:text-blue-400 transition-colors">
                   About Us
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNav('careers')} className="hover:text-blue-400 transition-colors">
-                  Careers
                 </button>
               </li>
               <li>
@@ -253,7 +248,7 @@ export default function Footer({ setActivePage }) {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Tattvaa Tech. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Tattva Tech. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>

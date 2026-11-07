@@ -174,7 +174,7 @@ export default function Home({ setActivePage }) {
 
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed">
-              Tattvaa Tech builds modern software, AI solutions and SaaS products that help businesses grow, automate and scale.
+              Tattva Tech builds modern software, AI solutions and SaaS products that help businesses grow, automate and scale.
             </p>
 
             {/* Action Buttons */}
@@ -353,7 +353,7 @@ export default function Home({ setActivePage }) {
               We act as an extension of your product team with transparent workflows, continuous support and innovation.
             </p>
             <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1">
-              About Tattvaa Tech <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              About Tattva Tech <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
             </span>
           </div>
 

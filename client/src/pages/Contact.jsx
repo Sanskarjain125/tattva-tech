@@ -110,7 +110,7 @@ export default function Contact() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
-              Have an idea or a project in mind? Let's discuss how Tattvaa Tech can help you turn it into a successful digital product.
+              Have an idea or a project in mind? Let's discuss how Tattva Tech can help you turn it into a successful digital product.
             </p>
 
             {/* Contact Details List */}

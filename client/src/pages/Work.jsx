@@ -292,7 +292,7 @@ export default function Work({ setActivePage }) {
               {selectedCaseStudy.title}
             </h3>
             <p className="text-xs text-slate-500 mb-6">
-              Client: <b>{selectedCaseStudy.clientName}</b> • Published on Tattvaa Tech Portfolio
+              Client: <b>{selectedCaseStudy.clientName}</b> • Published on Tattva Tech Portfolio
             </p>
 
             <div className="mb-6 rounded-xl overflow-hidden border border-slate-200">

@@ -34,16 +34,33 @@ export default function App() {
   const [adminToken, setAdminToken] = useState(null);
 
   const navigateToSection = (pageId) => {
+    const wasOnCareersPage = activePage === 'careers';
     setActivePage(pageId);
-    document.getElementById(pageId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (pageId === 'careers') {
+      window.scrollTo({ top: 0 });
+      window.history.replaceState(null, '', '#careers');
+      return;
+    }
+
     window.history.replaceState(null, '', `#${pageId}`);
+    if (wasOnCareersPage) {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          document.getElementById(pageId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      return;
+    }
+
+    document.getElementById(pageId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   useEffect(() => {
-    const sectionIds = ['home', 'services', 'products', 'work', 'about', 'insights', 'careers', 'faq', 'contact'];
+    const sectionIds = ['home', 'services', 'products', 'work', 'about', 'insights', 'faq', 'contact'];
     let ticking = false;
 
     const updateScrollState = () => {
+      if (window.location.hash === '#careers') return;
       if (ticking) return;
       ticking = true;
       window.requestAnimationFrame(() => {
@@ -59,7 +76,10 @@ export default function App() {
     };
 
     const initialHash = window.location.hash.slice(1);
-    if (sectionIds.includes(initialHash)) {
+    if (initialHash === 'careers') {
+      setActivePage('careers');
+      window.scrollTo({ top: 0 });
+    } else if (sectionIds.includes(initialHash)) {
       window.requestAnimationFrame(() => {
         document.getElementById(initialHash)?.scrollIntoView({ block: 'start' });
         updateScrollState();
@@ -99,7 +119,7 @@ export default function App() {
       candidates.forEach((card) => {
         if (!(card instanceof HTMLElement) || !hasCardSurface(card)) return;
         if (!card.closest('main')) return;
-        if (card.closest('.tilt-exempt-modal, .product-card, .work-card, .contact-form-card, .location-card, .home-hero-orbit-stage, .about-page') || card.matches('.lifecycle-step-card')) return;
+        if (card.closest('.tilt-exempt-modal, .product-card, .work-card, .insights-card, .contact-form-card, .location-card, .home-hero-orbit-stage, .about-page') || card.matches('.lifecycle-step-card')) return;
         if (card.parentElement?.closest('.tilt-card')) return;
         card.classList.add('tilt-card');
       });
@@ -282,33 +302,36 @@ export default function App() {
 
       {/* Main Public View */}
       <main className="flex-1">
-        <section id="home" className="public-section">
-          <Home setActivePage={navigateToSection} />
-        </section>
-        <section id="services" className="public-section">
-          <Services setActivePage={navigateToSection} />
-        </section>
-        <section id="products" className="public-section">
-          <Products setActivePage={navigateToSection} />
-        </section>
-        <section id="work" className="public-section">
-          <Work setActivePage={navigateToSection} />
-        </section>
-        <section id="about" className="public-section">
-          <About setActivePage={navigateToSection} />
-        </section>
-        <section id="insights" className="public-section">
-          <Insights setActivePage={navigateToSection} />
-        </section>
-        <section id="careers" className="public-section">
+        {activePage === 'careers' ? (
           <Careers setActivePage={navigateToSection} />
-        </section>
-        <section id="faq" className="public-section">
-          <FAQ setActivePage={navigateToSection} />
-        </section>
-        <section id="contact" className="public-section">
-          <Contact />
-        </section>
+        ) : (
+          <>
+            <section id="home" className="public-section">
+              <Home setActivePage={navigateToSection} />
+            </section>
+            <section id="services" className="public-section">
+              <Services setActivePage={navigateToSection} />
+            </section>
+            <section id="products" className="public-section">
+              <Products setActivePage={navigateToSection} />
+            </section>
+            <section id="work" className="public-section">
+              <Work setActivePage={navigateToSection} />
+            </section>
+            <section id="about" className="public-section">
+              <About setActivePage={navigateToSection} />
+            </section>
+            <section id="insights" className="public-section">
+              <Insights setActivePage={navigateToSection} />
+            </section>
+            <section id="faq" className="public-section">
+              <FAQ setActivePage={navigateToSection} />
+            </section>
+            <section id="contact" className="public-section">
+              <Contact />
+            </section>
+          </>
+        )}
       </main>
 
       {/* Footer */}

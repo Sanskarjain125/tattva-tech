@@ -83,7 +83,7 @@ export default function Navbar({
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
-                TATTVAA TECH
+                TATTVA TECH
               </span>
               <span className="text-[9px] font-bold tracking-[0.2em] text-blue-600 uppercase">
                 IDEAS INTO IMPACT

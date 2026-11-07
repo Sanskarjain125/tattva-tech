@@ -15,10 +15,7 @@ import {
   Rocket,
   Layers,
   BookOpen,
-  HeartHandshake,
-  MessageCircle,
   UsersRound,
-  Settings,
   KeyRound,
   MonitorSmartphone,
   Eye,
@@ -81,11 +78,7 @@ export default function About({ setActivePage }) {
 
   const workLifeBenefits = [
     { title: 'Learning & Development', icon: BookOpen, color: 'pink' },
-    { title: 'Mindful Personal Guidance', icon: HeartHandshake, color: 'purple' },
-    { title: 'Constructive Feedback', icon: MessageCircle, color: 'blue' },
     { title: 'Inclusive & Open Culture', icon: UsersRound, color: 'teal' },
-    { title: 'Innovation & Quality First', icon: Lightbulb, color: 'orange' },
-    { title: 'Proactive Implementation', icon: Settings, color: 'cyan' },
     { title: 'Global Opportunities', icon: KeyRound, color: 'rose' },
     { title: 'Latest Technology', icon: MonitorSmartphone, color: 'indigo' },
   ];
@@ -97,7 +90,7 @@ export default function About({ setActivePage }) {
         {/* ================= HEADER SECTION (Screen 5) ================= */}
         <div className="max-w-3xl space-y-4 text-left mb-10">
           <span className="text-xs font-bold tracking-widest text-blue-600 uppercase">
-            About Tattvaa Tech
+            About Tattva Tech
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Technology, AI, Robotics & Digital Solutions{' '}
@@ -106,7 +99,7 @@ export default function About({ setActivePage }) {
             </span>
           </h1>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Tattvaa Tech is a technology and innovation company providing software, AI, robotics, digital, creative, and business solutions for startups, businesses, educational institutions, and organizations. We help our clients turn ideas into practical, scalable, and cost-effective solutions that create real business value.
+            Tattva Tech is a technology and innovation company providing software, AI, robotics, digital, creative, and business solutions for startups, businesses, educational institutions, and organizations. We help our clients turn ideas into practical, scalable, and cost-effective solutions that create real business value.
           </p>
         </div>
 
@@ -209,7 +202,7 @@ export default function About({ setActivePage }) {
               Work Life At Its Best
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <div className="work-life-benefits">
             {workLifeBenefits.map(({ title, icon: BenefitIcon, color }) => (
               <article
                 className={`work-life-card work-life-card-${color}`}
@@ -250,7 +243,7 @@ export default function About({ setActivePage }) {
               Founders & Leadership
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
-              The Leadership Behind Tattvaa Tech
+              The Leadership Behind Tattva Tech
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mt-2">
               Visionary leadership driving engineering excellence, enterprise scale, and client success.

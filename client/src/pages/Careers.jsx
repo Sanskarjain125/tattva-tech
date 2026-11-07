@@ -131,7 +131,7 @@ export default function Careers({ setActivePage }) {
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-4 text-left">
             <span className="text-xs font-bold tracking-widest text-blue-600 uppercase">
-              Careers at Tattvaa Tech
+              Careers at Tattva Tech
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Build the Future With Us
@@ -183,7 +183,7 @@ export default function Careers({ setActivePage }) {
                     <span className="font-black text-sm">T</span>
                   </div>
                   <div className="text-left">
-                    <div className="text-base font-black tracking-wide">TATTVAA TECH</div>
+                    <div className="text-base font-black tracking-wide">TATTVA TECH</div>
                     <div className="text-[8px] tracking-[0.2em] text-blue-400 font-bold">IDEAS INTO IMPACT</div>
                   </div>
                 </div>
@@ -215,9 +215,9 @@ export default function Careers({ setActivePage }) {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
                 Current Openings ({jobs.length})
               </h2>
-              <p className="text-sm text-slate-500 mt-1">
+              {/* <p className="text-sm text-slate-500 mt-1">
                 All roles are managed directly through our real-time MongoDB recruitment pipeline.
-              </p>
+              </p> */}
             </div>
             <button
               onClick={loadJobs}

@@ -1,9 +1,11 @@
 .brand-marquee {
   width: 100vw;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
-  padding: clamp(2.75rem, 6vw, 5rem) 0;
+  padding: clamp(1rem, 2vw, 1.5rem) 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
   background: #050713;
   color: #f8fafc;
 }
@@ -23,26 +25,26 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: clamp(1.25rem, 3.2vw, 3.5rem);
-  padding-right: clamp(1.25rem, 3.2vw, 3.5rem);
+  gap: clamp(0.75rem, 1.8vw, 1.75rem);
+  padding-right: clamp(0.75rem, 1.8vw, 1.75rem);
   white-space: nowrap;
 }
 
 .brand-marquee-phrase {
   color: #f8fafc;
   font-family: "Arial Narrow", "Franklin Gothic Medium", Impact, sans-serif;
-  font-size: clamp(2.75rem, 7.5vw, 7rem);
+  font-size: clamp(1.65rem, 4vw, 3.4rem);
   font-stretch: condensed;
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.94;
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .brand-marquee-dot {
   color: #38aaf7;
   font-family: inherit;
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-size: clamp(1rem, 2.2vw, 1.8rem);
   line-height: 1;
 }
 
@@ -53,7 +55,7 @@
 .brand-marquee-divider {
   width: calc(100% - clamp(2.5rem, 8vw, 8rem));
   height: 1px;
-  margin: clamp(1.25rem, 3vw, 2.25rem) auto;
+  margin: clamp(0.55rem, 1vw, 0.8rem) auto;
   background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.32), transparent);
 }
 
@@ -90,32 +92,32 @@
 
 @media (max-width: 1023px) {
   .brand-marquee-phrase {
-    font-size: clamp(3.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 }
 
 @media (max-width: 639px) {
   .brand-marquee {
-    margin-top: 3.5rem;
-    padding: 2.5rem 0;
+    margin-top: 1.75rem;
+    padding: 1rem 0;
   }
 
   .brand-marquee-phrase {
-    font-size: clamp(2.25rem, 9vw, 3.25rem);
-    letter-spacing: -0.045em;
+    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    letter-spacing: -0.03em;
   }
 
   .brand-marquee-group {
-    gap: 1.25rem;
-    padding-right: 1.25rem;
+    gap: 0.7rem;
+    padding-right: 0.7rem;
   }
 
   .brand-marquee-dot {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .brand-marquee-loop-dot {
-    margin-left: -0.625rem;
+    margin-left: -0.35rem;
   }
 }
 
@@ -147,6 +149,6 @@
   }
 
   .brand-marquee-phrase {
-    font-size: clamp(2rem, 7vw, 3.75rem);
+    font-size: clamp(1.5rem, 6vw, 2.4rem);
   }
 }

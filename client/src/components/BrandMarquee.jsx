@@ -1,7 +1,7 @@
 import React from 'react';
 import './BrandMarquee.css';
 
-const brandPhrases = ['TATTVAA TECH', 'IDEAS INTO IMPACT', 'TATTVAA TECH', 'IDEAS INTO IMPACT'];
+const brandPhrases = ['TATTVA TECH', 'IDEAS INTO IMPACT', 'TATTVA TECH', 'IDEAS INTO IMPACT'];
 const servicePhrases = ['WEB & APP DEVELOPMENT', 'SAAS', 'UI/UX DESIGN', 'DIGITAL GROWTH', 'AI & AUTOMATION'];
 
 function MarqueeRow({ phrases, direction, label }) {
