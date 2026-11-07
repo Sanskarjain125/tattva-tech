@@ -62,7 +62,7 @@ export default function AdminAuthModal({ isOpen, onClose, onAuthSuccess }) {
             <h3 className="text-xl font-extrabold text-slate-900">
               Admin Login
             </h3>
-            <p className="text-xs text-slate-500">Sign in to access Tattvaa Tech Admin Console</p>
+            <p className="text-xs text-slate-500">Sign in to access Tattva Tech Admin Console</p>
           </div>
         </div>
 
