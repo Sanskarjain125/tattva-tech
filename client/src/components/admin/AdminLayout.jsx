@@ -14,17 +14,21 @@ import {
   ShieldCheck,
   ChevronRight,
   Bell,
+  KeyRound,
 } from 'lucide-react';
+import AdminChangePasswordModal from './AdminChangePasswordModal';
 
 export default function AdminLayout({
   activeTab,
   setActiveTab,
   adminUser,
+  token,
   onLogout,
   onBackToPublicSite,
   children,
 }) {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [changePasswordOpen, setChangePasswordOpen] = useState(false);
 
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -94,7 +98,7 @@ export default function AdminLayout({
             <span>View Public Website</span>
           </button>
 
-          <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div className="pt-2 border-t border-slate-800/80">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-blue-900/60 text-blue-300 flex items-center justify-center text-xs font-bold border border-blue-700/50">
                 {adminUser?.name?.charAt(0) || 'A'}
@@ -104,13 +108,23 @@ export default function AdminLayout({
                 <div className="text-[10px] text-slate-500">Super Admin</div>
               </div>
             </div>
-            <button
-              onClick={onLogout}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-rose-400 hover:bg-slate-800 transition-colors"
-              title="Logout"
-            >
-              <LogOut className="w-4 h-4" />
-            </button>
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <button
+                onClick={() => setChangePasswordOpen(true)}
+                className="flex items-center justify-center gap-1.5 rounded-lg bg-slate-800 px-2 py-2 text-[10px] font-semibold text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
+              >
+                <KeyRound className="h-3.5 w-3.5" />
+                Change Password
+              </button>
+              <button
+                onClick={onLogout}
+                className="flex items-center justify-center gap-1.5 rounded-lg bg-slate-800 px-2 py-2 text-[10px] font-semibold text-slate-300 transition-colors hover:bg-rose-950/60 hover:text-rose-300"
+                title="Logout"
+              >
+                <LogOut className="h-3.5 w-3.5" />
+                Logout
+              </button>
+            </div>
           </div>
         </div>
       </aside>
@@ -160,11 +174,22 @@ export default function AdminLayout({
               </button>
             );
           })}
-          <div className="pt-2 border-t border-slate-800 flex justify-between items-center">
-            <span className="text-xs text-slate-400">{adminUser?.email}</span>
-            <button onClick={onLogout} className="text-xs text-rose-400 font-bold flex items-center gap-1">
-              <LogOut className="w-3.5 h-3.5" /> Logout
-            </button>
+          <div className="pt-2 border-t border-slate-800">
+            <div className="mb-2 text-xs text-slate-400">{adminUser?.email}</div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  setChangePasswordOpen(true);
+                  setMobileSidebarOpen(false);
+                }}
+                className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-slate-800 py-2 text-xs font-bold text-slate-300"
+              >
+                <KeyRound className="h-3.5 w-3.5" /> Change Password
+              </button>
+              <button onClick={onLogout} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-slate-800 py-2 text-xs font-bold text-rose-400">
+                <LogOut className="h-3.5 w-3.5" /> Logout
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -206,6 +231,11 @@ export default function AdminLayout({
         </div>
       </main>
 
+      <AdminChangePasswordModal
+        isOpen={changePasswordOpen}
+        onClose={() => setChangePasswordOpen(false)}
+        token={token}
+      />
     </div>
   );
 }

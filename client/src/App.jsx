@@ -278,6 +278,7 @@ export default function App() {
           activeTab={adminTab}
           setActiveTab={setAdminTab}
           adminUser={adminUser}
+          token={adminToken}
           onLogout={handleLogout}
           onBackToPublicSite={() => setIsAdminView(false)}
         >

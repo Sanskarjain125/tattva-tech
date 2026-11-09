@@ -43,6 +43,17 @@ export const getAdminMe = async (token) => {
   return data;
 };
 
+export const changeAdminPassword = async (passwords, token) => {
+  const res = await fetch(`${API_BASE}/auth/change-password`, {
+    method: 'POST',
+    headers: getHeaders(token),
+    body: JSON.stringify(passwords),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.message || 'Failed to change password');
+  return data;
+};
+
 // ================= DASHBOARD METRICS =================
 export const fetchDashboardStats = async (token) => {
   const res = await fetch(`${API_BASE}/admin/stats`, {
